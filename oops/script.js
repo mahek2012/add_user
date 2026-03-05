@@ -103,4 +103,10 @@ class Admin extends User{
 }
 let admin =new Admin("admin","admin@gmail.com","admin1234","delte user ,edit user,create user");
 console.log("admin",admin);
-//protypal inherihance  vs classical inheritance
+
+ // prototypal inheritance vs classical inheritance
+ // classical Inheritance -- create a classes and extands their classes
+ // inheritance meaning --> class to class inheritance (copy one class into anthor class)
+ // prototypal inheritance --> object to object
+ // ek object chhe tene tame all props/methods ne inherit kari chho ke nava object ma
+ // create form that can save data into local storage with help of using OOPS (only)
