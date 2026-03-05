@@ -56,7 +56,7 @@ class Createpen{
     this.price=price;
     this.qty=qty;
     this.color =color;
-    
+
   //write
 this.write=function  (msg){
    let h1 =document.createElement("h1");
@@ -65,5 +65,42 @@ this.write=function  (msg){
    console.log(this);
    document.querySelector("body").appendChild(h1);
     };
+     //eraser
+this.erase=function  (msg){
+   let h1 =document.querySelector("h1").remove();
+
+};
 }
 }
+let pen=new Createpen("cello",100,10,"green");
+let pen1 =new Createpen("reyold",100,20,"red");
+console.log(pen);
+
+
+
+// extends ---> super
+// create a new class that hold old class value and also have some new values
+// copy old class and add new value
+
+class User{
+    constructor(name,email,password){
+        this.name=name;
+        this.email=email;
+        this.password=password;
+        this.role="user";
+        }
+}
+let user =new User("test","test@gmail.com","abc1234");
+console.log("user",user);
+
+class Admin extends User{
+    constructor(name,email,password,rights){
+        super(name,email,password)//extends class constructer --> super
+
+        this.role="admin";
+        this.rights=rights;
+    }
+}
+let admin =new Admin("admin","admin@gmail.com","admin1234","delte user ,edit user,create user");
+console.log("admin",admin);
+//protypal inherihance  vs classical inheritance
