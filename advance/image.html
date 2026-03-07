@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced JS</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: white;
+        background-color: black;
+      }
+
+      h1 {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .spacer {
+        height: 600px;
+      }
+
+      .lazy-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 30px 0;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      .loaded {
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>Lazy Loading Images with InterSectionObserver</h1>
+
+    <div class="container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam enim
+        quia vitae voluptas atque id facilis laboriosam recusandae dicta
+        dignissimos.
+      </p>
+
+      <div class="spacer"></div>
+
+      <img
+        src="./image/n1.jpg"
+        alt="iamge"
+        class="lazy-img"
+      />
+      <!-- when you add  in any attributte you can acess that value into javascript -->
+      <div class="spacer"></div>
+      <img
+        src="./image/n2.jpg"
+        alt="iamge"
+        class="lazy-img"
+      />
+      <div class="spacer"></div>
+      <img src="./image/c1.jpg" alt="iamge" class="lazy-img" />
+    </div>
+
+    <script src="performance.js"></script>
+  </body>
+</html>
